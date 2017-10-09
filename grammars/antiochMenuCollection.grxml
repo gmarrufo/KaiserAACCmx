@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<grammar mode="voice" xml:lang="en-US" version="1.0" root="ROOT">
+	<rule id="ROOT" scope="public">
+		<ruleref uri="#Location" tag="dm_root=Location.dataLocation;dm_confirm_string=Location.confirm_string;" />		
+	</rule>
+	<rule id="preLocation">
+		<one-of>
+			<item><ruleref special="NULL"/></item>
+			<item tag="tmpLocation='null'">Kaiser</item>
+		</one-of>
+	</rule>
+	<rule id="postLocation">
+		<one-of>
+			<item tag="tmpLocation='null'"><ruleref special="NULL"/></item>
+			<item tag="tmpLocation='null'">Kaiser</item>
+		</one-of>
+	</rule>
+	<rule id="Location">
+		<item><ruleref uri="#preLocation"/></item>
+		<one-of>
+			<item tag="dataLocation='1108';confirm_string='1108';">Antioch Delta Fair</item>
+			<item tag="dataLocation='1108';confirm_string='1108';">Delta Fair</item>
+			<item tag="dataLocation='1109';confirm_string='1109';">Medical Office</item>
+			<item tag="dataLocation='1109';confirm_string='1109';">Antioch Medical Office</item>
+			<item tag="dataLocation='1109';confirm_string='1109';">Antioch Office</item>
+			<item tag="dataLocation='1109';confirm_string='1109';">Antioch Medical</item>
+			<item tag="dataLocation='1109';confirm_string='1109';">Office Building</item>
+			<item tag="dataLocation='1109';confirm_string='1109';">Medical</item>			
+		</one-of>
+		<item><ruleref uri="#postLocation"/></item>
+	</rule>
+</grammar>

@@ -1,0 +1,1 @@
+<%@ Page language="c#" Inherits="KaiserAACCmx.globalError" CodeFile="globalError.aspx.cs" CodeFileBaseClass="KaiserAACCmx.XMLPage" %>

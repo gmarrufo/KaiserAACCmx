@@ -1,0 +1,83 @@
+﻿<?xml version="1.0"?>
+<grammar mode="voice"
+         root="ROOT"
+         version="1.0"
+         xml:lang="es-US"
+         tag-format='swi-semantics/1.0'
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+<lexicon uri="userdictMx.xml?SWI.type=backup"/> 
+
+<rule id="ROOT" scope="public">
+  <item>
+    <ruleref uri="#Location"/>
+    <tag>
+      	dm_root=Location.dm_root;
+		dm_confirm_string=Location.dm_confirm_string;	
+    </tag>
+  </item>
+</rule>
+
+<rule id="Location">
+   <item>
+     <one-of>
+        <item>
+			antioch delta fair		
+				<tag>
+					dm_root='1108';
+					dm_confirm_string='1108';
+				</tag>
+        </item> 
+        <item>
+			delta fair		
+				<tag>
+					dm_root='1108';
+					dm_confirm_string='1108';
+				</tag>
+        </item>  
+        <item>
+			delta		
+				<tag>
+					dm_root='1108';
+					dm_confirm_string='1108';
+				</tag>
+        </item>  
+        <item>
+			oficinas médicas antioch		
+				<tag>
+					dm_root='1109';
+					dm_confirm_string='1109';
+				</tag>
+        </item>  
+        <item>
+			oficinas antioch		
+				<tag>
+					dm_root='1109';
+					dm_confirm_string='1109';
+				</tag>
+        </item>  
+        <item>
+			oficinas médicas		
+				<tag>
+					dm_root='1109';
+					dm_confirm_string='1109';
+				</tag>
+        </item>  
+        <item>
+			oficinas		
+				<tag>
+					dm_root='1109';
+					dm_confirm_string='1109';
+				</tag>
+        </item>
+         <item>
+			edificio de oficinas médicas		
+				<tag>
+					dm_root='1109';
+					dm_confirm_string='1109';
+				</tag>
+        </item>             
+     </one-of>
+   </item>
+</rule>		
+</grammar>

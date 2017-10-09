@@ -1,0 +1,880 @@
+﻿<?xml version="1.0"?>
+<grammar mode="voice"
+         root="ROOT"
+         version="1.0"
+         xml:lang="es-US"
+         tag-format='swi-semantics/1.0'
+         xmlns="http://www.w3.org/2001/06/grammar">         
+
+<meta http-equiv="Expires" content="0"/> 
+
+<lexicon uri="userdictMx.xml?SWI.type=backup"/>
+
+
+<!-- ====================== -->
+<!--  root rule (default)   -->
+<!-- ====================== -->
+<rule id="ROOT" scope="public">
+  <item>
+    <item><ruleref uri="#in"/></item>
+    <item><ruleref uri="#preLocation"/></item>    
+    <item><ruleref uri="#in"/></item>
+    <one-of>
+      <item>
+        <ruleref uri="#Location"/>
+          <tag>
+            dm_root=Location.dm_root;
+            dm_confirm_string=Location.dm_confirm_string;
+          </tag>
+      </item>      
+    </one-of>
+    <item><ruleref uri="#postLocation"/></item>    
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- post/append rule       -->
+<!-- ====================== -->
+<rule id="postLocation">
+  <item>
+    <one-of>
+      <item><ruleref special="NULL"/></item>
+      <item>kaiser</item>
+      <item>de kaiser</item>
+      <item>medical center</item>
+      <item>medical offices</item>
+      <item>medical office</item>
+      <item>california</item>
+	  <item>medical office building</item>		
+    </one-of>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- in rule				-->
+<!-- ====================== -->
+<rule id="in">
+  <item>
+    <one-of>
+      <item><ruleref special="NULL"/></item>
+      <item>de</item>
+      <item>en</item>
+      <item>es</item>
+    </one-of>
+  </item>
+</rule>	
+
+<!-- ====================== -->
+<!-- prefix rule            -->
+<!-- ====================== -->
+<rule id="preLocation">
+  <item>
+    <one-of>
+      <item><ruleref special="NULL"/></item>
+      <item>clínica</item>
+      <item>hospital</item>
+      <item>oficinas</item>
+      <item>oficinas médicas</item>
+      <item>edificio de oficinas médicas</item>
+      <item>centro médico</item>
+      <item>consultorio médico</item>
+      <item>kaiser</item>
+      <item>kaiser permanente</item>
+    </one-of>
+  </item>
+</rule>	
+
+<!-- ====================== -->
+<!-- Location              -->
+<!-- ====================== -->
+<rule id="Location">
+  <item>
+     <one-of>
+        <item><ruleref uri="#c1008"/>
+           <tag>dm_root=c1008.dm_root;dm_confirm_string=c1008.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1009"/>
+           <tag>dm_root=c1009.dm_root;dm_confirm_string=c1009.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1010"/>
+           <tag>dm_root=c1010.dm_root;dm_confirm_string=c1010.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1011"/>
+           <tag>dm_root=c1011.dm_root;dm_confirm_string=c1011.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1012"/>
+           <tag>dm_root=c1012.dm_root;dm_confirm_string=c1012.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1013"/>
+           <tag>dm_root=c1013.dm_root;dm_confirm_string=c1013.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1014"/>
+           <tag>dm_root=c1014.dm_root;dm_confirm_string=c1014.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1015"/>
+           <tag>dm_root=c1015.dm_root;dm_confirm_string=c1015.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1016"/>
+           <tag>dm_root=c1016.dm_root;dm_confirm_string=c1016.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1017"/>
+           <tag>dm_root=c1017.dm_root;dm_confirm_string=c1017.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1018"/>
+           <tag>dm_root=c1018.dm_root;dm_confirm_string=c1018.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1019"/>
+           <tag>dm_root=c1019.dm_root;dm_confirm_string=c1019.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1020"/>
+           <tag>dm_root=c1020.dm_root;dm_confirm_string=c1020.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1022"/>
+           <tag>dm_root=c1022.dm_root;dm_confirm_string=c1022.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1023"/>
+           <tag>dm_root=c1023.dm_root;dm_confirm_string=c1023.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1024"/>
+           <tag>dm_root=c1024.dm_root;dm_confirm_string=c1024.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1025"/>
+           <tag>dm_root=c1025.dm_root;dm_confirm_string=c1025.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1026"/>
+           <tag>dm_root=c1026.dm_root;dm_confirm_string=c1026.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1027"/>
+           <tag>dm_root=c1027.dm_root;dm_confirm_string=c1027.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1028"/>
+           <tag>dm_root=c1028.dm_root;dm_confirm_string=c1028.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1029"/>
+           <tag>dm_root=c1029.dm_root;dm_confirm_string=c1029.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1030"/>
+           <tag>dm_root=c1030.dm_root;dm_confirm_string=c1030.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1031"/>
+           <tag>dm_root=c1031.dm_root;dm_confirm_string=c1031.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1032"/>
+           <tag>dm_root=c1032.dm_root;dm_confirm_string=c1032.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1033"/>
+           <tag>dm_root=c1033.dm_root;dm_confirm_string=c1033.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1034"/>
+           <tag>dm_root=c1034.dm_root;dm_confirm_string=c1034.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1035"/>
+           <tag>dm_root=c1035.dm_root;dm_confirm_string=c1035.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1036"/>
+           <tag>dm_root=c1036.dm_root;dm_confirm_string=c1036.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1037"/>
+           <tag>dm_root=c1037.dm_root;dm_confirm_string=c1037.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1038"/>
+           <tag>dm_root=c1038.dm_root;dm_confirm_string=c1038.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1039"/>
+           <tag>dm_root=c1039.dm_root;dm_confirm_string=c1039.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1040"/>
+           <tag>dm_root=c1040.dm_root;dm_confirm_string=c1040.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1041"/>
+           <tag>dm_root=c1041.dm_root;dm_confirm_string=c1041.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1042"/>
+           <tag>dm_root=c1042.dm_root;dm_confirm_string=c1042.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1043"/>
+           <tag>dm_root=c1043.dm_root;dm_confirm_string=c1043.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1044"/>
+           <tag>dm_root=c1044.dm_root;dm_confirm_string=c1044.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1045"/>
+           <tag>dm_root=c1045.dm_root;dm_confirm_string=c1045.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1046"/>
+           <tag>dm_root=c1046.dm_root;dm_confirm_string=c1046.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1047"/>
+           <tag>dm_root=c1047.dm_root;dm_confirm_string=c1047.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1048"/>
+           <tag>dm_root=c1048.dm_root;dm_confirm_string=c1048.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1049"/>
+           <tag>dm_root=c1049.dm_root;dm_confirm_string=c1049.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1050"/>
+           <tag>dm_root=c1050.dm_root;dm_confirm_string=c1050.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1051"/>
+           <tag>dm_root=c1051.dm_root;dm_confirm_string=c1051.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1052"/>
+           <tag>dm_root=c1052.dm_root;dm_confirm_string=c1052.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1053"/>
+           <tag>dm_root=c1053.dm_root;dm_confirm_string=c1053.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1054"/>
+           <tag>dm_root=c1054.dm_root;dm_confirm_string=c1054.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1055"/>
+           <tag>dm_root=c1055.dm_root;dm_confirm_string=c1055.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1056"/>
+           <tag>dm_root=c1056.dm_root;dm_confirm_string=c1056.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1057"/>
+           <tag>dm_root=c1057.dm_root;dm_confirm_string=c1057.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1058"/>
+           <tag>dm_root=c1058.dm_root;dm_confirm_string=c1058.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1059"/>
+           <tag>dm_root=c1059.dm_root;dm_confirm_string=c1059.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1060"/>
+           <tag>dm_root=c1060.dm_root;dm_confirm_string=c1060.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1061"/>
+           <tag>dm_root=c1061.dm_root;dm_confirm_string=c1061.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1062"/>
+           <tag>dm_root=c1062.dm_root;dm_confirm_string=c1062.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1063"/>
+           <tag>dm_root=c1063.dm_root;dm_confirm_string=c1063.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1064"/>
+           <tag>dm_root=c1064.dm_root;dm_confirm_string=c1064.dm_confirm_string;</tag>
+        </item>
+        <item><ruleref uri="#c1064b"/>
+           <tag>dm_root=c1064b.dm_root;dm_confirm_string=c1064b.dm_confirm_string;</tag>
+        </item>
+     </one-of>
+   </item>
+</rule>	
+
+<!-- ====================== -->
+<!-- antioch -->
+<!-- ====================== -->
+<rule id="c1008">
+  <item>
+     <one-of>
+       <item>antioch</item>
+       <item>delta fair</item>
+     </one-of>
+     <tag>dm_root='1008';dm_confirm_string='1008';</tag>
+  </item>
+</rule>	
+
+<!-- ====================== -->
+<!-- deer valley -->
+<!-- ====================== -->
+<rule id="c1009">
+  <item>deer valley
+    <tag>dm_root='1009';dm_confirm_string='1009';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- campbell -->
+<!-- ====================== -->
+<rule id="c1010">
+  <item>campbell
+    <tag>dm_root='1010';dm_confirm_string='1010';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- davis -->
+<!-- ====================== -->
+<rule id="c1011">
+  <item>davis
+    <tag>dm_root='1011';dm_confirm_string='1011';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- fairfield -->
+<!-- ====================== -->
+<rule id="c1012">
+  <item>fairfield
+    <tag>dm_root='1012';dm_confirm_string='1012';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- folsom -->
+<!-- ====================== -->
+<rule id="c1013">
+  <item>folsom
+    <tag>dm_root='1013';dm_confirm_string='1013';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- fremont -->
+<!-- ====================== -->
+<rule id="c1014">
+  <item>fremont
+    <tag>dm_root='1014';dm_confirm_string='1014';</tag>
+  </item>  
+</rule>
+
+<!-- ====================== -->
+<!-- clovis -->
+<!-- ====================== -->
+<rule id="c1015">
+  <item>clovis
+    <tag>dm_root='1015';dm_confirm_string='1015';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- oakhurst -->
+<!-- ====================== -->
+<rule id="c1016">
+  <item>oakhurst
+    <tag>dm_root='1016';dm_confirm_string='1016';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- selma -->
+<!-- ====================== -->
+<rule id="c1017">
+  <item>selma
+    <tag>dm_root='1017';dm_confirm_string='1017';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- fresno -->
+<!-- ====================== -->
+<rule id="c1018">
+  <item>fresno
+    <tag>dm_root='1018';dm_confirm_string='1018';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- gilroy -->
+<!-- ====================== -->
+<rule id="c1019">
+  <item>gilroy
+    <tag>dm_root='1019';dm_confirm_string='1019';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- union city -->
+<!-- ====================== -->
+<rule id="c1020">
+  <item>union city
+    <tag>dm_root='1020';dm_confirm_string='1020';</tag>
+  </item>
+</rule>
+
+
+<!-- ====================== -->
+<!-- manteca -->
+<!-- ====================== -->
+<rule id="c1022">
+  <item>manteca
+    <tag>dm_root='1022';dm_confirm_string='1022';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- martinez -->
+<!-- ====================== -->
+<rule id="c1023">
+  <item>martinez
+    <tag>dm_root='1023';dm_confirm_string='1023';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- milpitas -->
+<!-- ====================== -->
+<rule id="c1024">
+  <item>milpitas
+    <tag>dm_root='1024';dm_confirm_string='1024';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- modesto -->
+<!-- ====================== -->
+<rule id="c1025">
+  <item>modesto
+    <tag>dm_root='1025';dm_confirm_string='1025';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- stanislaus -->
+<!-- ====================== -->
+<rule id="c1026">  
+  <item>
+     <one-of>
+       <item>stanislaus</item>
+       <item>stanislaus providers</item>
+       <item>stanislaus provider network</item>
+       <item>s p n</item>
+     </one-of>
+     <tag>dm_root='1026';dm_confirm_string='1026';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- mountain view -->
+<!-- ====================== -->
+<rule id="c1027">
+  <item>mountain view
+    <tag>dm_root='1027';dm_confirm_string='1027';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- napa -->
+<!-- ====================== -->
+<rule id="c1028">
+  <item>napa
+    <tag>dm_root='1028';dm_confirm_string='1028';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- novato -->
+<!-- ====================== -->
+<rule id="c1029">
+  <item>novato
+    <tag>dm_root='1029';dm_confirm_string='1029';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- oakland -->
+<!-- ====================== -->
+<rule id="c1030">
+  <item>
+     <one-of>
+       <item>oakland</item>
+       <item>alta bates providers</item>       
+     </one-of>
+     <tag>dm_root='1030';dm_confirm_string='1030';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- text -->
+<!-- ====================== -->
+<rule id="c1031">
+  <item>
+     <one-of>
+       <item>park shadelands</item>
+       <item>shadelands</item>       
+     </one-of>
+     <tag>dm_root='1031';dm_confirm_string='1031';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- petaluma -->
+<!-- ====================== -->
+<rule id="c1032">
+  <item>petaluma
+    <tag>dm_root='1032';dm_confirm_string='1032';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- pleasanton -->
+<!-- ====================== -->
+<rule id="c1033">
+  <item>pleasanton
+    <tag>dm_root='1033';dm_confirm_string='1033';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- point west -->
+<!-- ====================== -->
+<rule id="c1034">
+  <item>point west
+    <tag>dm_root='1034';dm_confirm_string='1034';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- rancho -->
+<!-- ====================== -->
+<rule id="c1035">
+  <item>
+     <one-of>
+       <item>rancho cordova</item>
+       <item>rancho</item>       
+     </one-of>
+     <tag>dm_root='1035';dm_confirm_string='1035';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- redwood city -->
+<!-- ====================== -->
+<rule id="c1036">
+  <item>redwood city
+    <tag>dm_root='1036';dm_confirm_string='1036';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- richmond -->
+<!-- ====================== -->
+<rule id="c1037">
+  <item>richmond
+    <tag>dm_root='1037';dm_confirm_string='1037';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- roseville -->
+<!-- ====================== -->
+<rule id="c1038">
+  <item>roseville
+    <tag>dm_root='1038';dm_confirm_string='1038';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- sacramento -->
+<!-- ====================== -->
+<rule id="c1039">
+  <item>
+     <one-of>
+       <item>sacramento</item>
+       <item>fair oaks</item>       
+     </one-of>
+     <tag>dm_root='1039';dm_confirm_string='1039';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- san francisco -->
+<!-- ====================== -->
+<rule id="c1040">
+  <item>
+     <one-of>
+       <item>san francisco</item>
+       <item>french campus</item>  
+       <item>geary campus</item>
+       <item>van ness</item>      
+     </one-of>
+     <tag>dm_root='1040';dm_confirm_string='1040';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- san rafael -->
+<!-- ====================== -->
+<rule id="c1041">
+  <item>
+     <one-of>
+       <item>san rafael</item>
+       <item>terra linda</item>  
+       <item>west marin</item>
+       <item>point reyes</item>      
+     </one-of>
+     <tag>dm_root='1041';dm_confirm_string='1041';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- santa clara -->
+<!-- ====================== -->
+<rule id="c1042">
+  <item>
+     <one-of>
+       <item>santa clara</item>
+       <item>santa clara homestead</item>  
+       <item>homestead</item>
+       <item>marina playa</item> 
+       <item>playa marin</item>      
+     </one-of>
+     <tag>dm_root='1042';dm_confirm_string='1042';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- santa rosa -->
+<!-- ====================== -->
+<rule id="c1043">
+  <item>santa rosa
+    <tag>dm_root='1043';dm_confirm_string='1043';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- rohnert park -->
+<!-- ====================== -->
+<rule id="c1044">
+  <item>rohnert park
+    <tag>dm_root='1044';dm_confirm_string='1044';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- santa teresa -->
+<!-- ====================== -->
+<rule id="c1045">
+  <item>
+     <one-of>      
+       <item>santa teresa</item> 
+       <item>san jose</item>      
+     </one-of>
+     <tag>dm_root='1045';dm_confirm_string='1045';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- south sacramento -->
+<!-- ====================== -->
+<rule id="c1046">
+ <item>
+     <one-of>
+       <item>south sacramento</item>
+       <item>sur de sacramento</item>  
+       <item>sur sacramento</item>
+       <item>sacramento de sur</item> 
+       <item>sacramento sur</item>      
+     </one-of>
+     <tag>dm_root='1046';dm_confirm_string='1046';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- elk grove -->
+<!-- ====================== -->
+<rule id="c1047">
+  <item>elk grove
+    <tag>dm_root='1047';dm_confirm_string='1047';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- south san francisco -->
+<!-- ====================== -->
+<rule id="c1048">
+  <item>
+     <one-of>
+       <item>south san francisco</item>
+       <item>sur san francisco</item>  
+       <item>sur de san francisco</item>
+       <item>san francisco sur</item> 
+       <item>san francisco de sur</item>      
+     </one-of>
+     <tag>dm_root='1048';dm_confirm_string='1048';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- daly city -->
+<!-- ====================== -->
+<rule id="c1049">
+  <item>daly city
+    <tag>dm_root='1049';dm_confirm_string='1049';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- stockton -->
+<!-- ====================== -->
+<rule id="c1050">
+  <item>stockton
+    <tag>dm_root='1050';dm_confirm_string='1050';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- vacaville -->
+<!-- ====================== -->
+<rule id="c1051">
+  <item>vacaville
+    <tag>dm_root='1051';dm_confirm_string='1051';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- vallejo -->
+<!-- ====================== -->
+<rule id="c1052">
+  <item>vallejo
+    <tag>dm_root='1052';dm_confirm_string='1052';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- walnut creek -->
+<!-- ====================== -->
+<rule id="c1053">
+  <item>walnut creek
+    <tag>dm_root='1053';dm_confirm_string='1053';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- san bruno -->
+<!-- ====================== -->
+<rule id="c1054">
+  <item>san bruno
+    <tag>dm_root='1054';dm_confirm_string='1054';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- livermore -->
+<!-- ====================== -->
+<rule id="c1055">
+  <item>livermore
+    <tag>dm_root='1055';dm_confirm_string='1055';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- tracy -->
+<!-- ====================== -->
+<rule id="c1056">
+  <item>tracy
+    <tag>dm_root='1056';dm_confirm_string='1056';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- alameda -->
+<!-- ====================== -->
+<rule id="c1057">
+  <item>alameda
+    <tag>dm_root='1057';dm_confirm_string='1057';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- pinole -->
+<!-- ====================== -->
+<rule id="c1058">
+  <item>pinole
+    <tag>dm_root='1058';dm_confirm_string='1058';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- lincoln -->
+<!-- ====================== -->
+<rule id="c1059">
+  <item>lincoln
+    <tag>dm_root='1059';dm_confirm_string='1059';</tag>
+  </item>
+</rule>
+
+<!-- ====================== -->
+<!-- san mateo -->
+<!-- ====================== -->
+<rule id="c1060">	
+	<item>
+		<one-of>
+			<item>san mateo</item>
+			<item>peninsula</item>			
+		</one-of>
+		<tag>dm_root='1060';dm_confirm_string='1060';</tag>
+	</item>
+</rule>
+
+
+<!-- ====================== -->
+<!-- promenade -->
+<!-- ====================== -->
+<rule id="c1061">	
+	<item>
+		<one-of>
+			<item>promenade</item>
+			<item>promenade elk grove</item>
+			<item>promenade south sacramento</item>
+			<item>promenod</item>
+			<item>promenod elk grove</item>
+			<item>promenod south sacramento</item>
+		</one-of>
+		<tag>dm_root='1061';dm_confirm_string='1061';</tag>
+	</item>
+</rule>
+
+<!-- ====================== -->
+<!-- San Ramon-Bishop Ranch -->
+<!-- ====================== -->
+<rule id="c1062">	
+	<item>
+		<one-of>
+			<item>San Ramon</item>
+			<item>San Raymen</item>
+			<item>Bishop Ranch</item>
+			<item>Bishop Ranch San Ramon</item>
+			<item>San Ramon Bishop Ranch</item>
+			<item>Ramon</item>
+			<item>Raymen</item>
+		</one-of>
+		<tag>dm_root='1062';dm_confirm_string='1062';</tag>
+	</item>
+</rule>
+
+<!-- ====================== -->
+<!-- San Leandro -->
+<!-- ====================== -->
+<rule id="c1063">	
+	<item>
+		<one-of>
+			<item>San Leandro</item>
+			<item>Leandro</item>
+		</one-of>
+		<tag>dm_root='1063';dm_confirm_string='1063';</tag>
+	</item>
+</rule>
+
+<!-- ====================== -->
+<!-- Sleepy Hollow -->
+<!-- ====================== -->
+<rule id="c1064">	
+	<item>
+		<one-of>
+			<item>Sleepy Hollow</item>
+		</one-of>
+		<tag>dm_root='1064';dm_confirm_string='1064';</tag>
+	</item>
+
+</rule>
+
+
+<!-- ====================== -->
+<!-- Hayward -->
+<!-- ====================== -->
+<rule id="c1064b">		
+	<item>
+		<one-of>
+			<item>Hayward</item>
+			<item>Sleepy Hollow Hayward</item>
+			<item>Hayward Sleepy Hollow</item>
+		</one-of>
+		<tag>dm_root='1064b';dm_confirm_string='1064b';</tag>
+	</item>
+</rule>
+</grammar>

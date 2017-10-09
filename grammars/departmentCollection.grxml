@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<grammar mode="voice" xml:lang="en-US" version="1.0" root="ROOT">
+	<rule id="ROOT" scope="public">
+		<ruleref uri="#departmentCollection" tag="dm_root=departmentCollection.dm_root;dm_confirmation_mode=departmentCollection.confirmation_mode;dm_confirm_string=departmentCollection.confirm_string;" />		
+	</rule>
+	<rule id="departmentCollection">
+		<one-of>
+			<item tag="dm_root='adult';confirmation_mode='IF_NECESSARY';confirm_string='2507';">Adult</item>
+			<item tag="dm_root='adult';confirmation_mode='IF_NECESSARY';confirm_string='2507';">A dull</item>
+			<item tag="dm_root='adult';confirmation_mode='IF_NECESSARY';confirm_string='2507';">Adult Information</item>
+			<item tag="dm_root='pediatric';confirmation_mode='IF_NECESSARY';confirm_string='2508';">Pediatric</item>
+			<item tag="dm_root='pediatric';confirmation_mode='IF_NECESSARY';confirm_string='2508';">Pediatric Information</item>
+			<item tag="dm_root='pediatric';confirmation_mode='IF_NECESSARY';confirm_string='2508';">Children</item>	
+			<item tag="dm_root='pediatric';confirmation_mode='IF_NECESSARY';confirm_string='2508';">Pedi</item>	
+		</one-of>
+	</rule>	
+</grammar>

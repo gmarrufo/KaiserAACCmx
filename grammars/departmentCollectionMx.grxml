@@ -1,0 +1,69 @@
+﻿<?xml version="1.0"?>
+<grammar mode="voice"
+         root="ROOT"
+         version="1.0"
+         xml:lang="es-US"
+         tag-format='swi-semantics/1.0'
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+<meta http-equiv="Expires" content="0"/> 
+<lexicon uri="userdictMx.xml?SWI.type=backup"/> 
+
+<rule id="ROOT" scope="public">
+  <item>
+    <ruleref uri="#departmentCollection"/>
+    <tag>
+      	dm_root=departmentCollection.dm_root;
+      	dm_confirmation_mode=departmentCollection.dm_confirmation_mode;
+		dm_confirm_string=departmentCollection.dm_confirm_string;		
+    </tag>
+  </item>
+</rule>
+
+<rule id="departmentCollection">
+   <item>
+     <one-of>
+        <item>
+			adultos		
+				<tag>
+					dm_root='adult';					
+					dm_confirmation_mode='IF_NECESSARY';
+					dm_confirm_string='2507';
+				</tag>
+        </item> 
+        <item>
+			información para adultos		
+				<tag>
+					dm_root='adult';					
+					dm_confirmation_mode='IF_NECESSARY';
+					dm_confirm_string='2507';
+				</tag>
+        </item> 
+        <item>
+			pediatría		
+				<tag>
+					dm_root='pediatric';					
+					dm_confirmation_mode='IF_NECESSARY';
+					dm_confirm_string='2508';
+				</tag>
+        </item> 
+        <item>
+			información en pediatría		
+				<tag>
+					dm_root='pediatric';					
+					dm_confirmation_mode='IF_NECESSARY';
+					dm_confirm_string='2508';
+				</tag>
+        </item> 
+        <item>
+			niños		
+				<tag>
+					dm_root='pediatric';					
+					dm_confirmation_mode='IF_NECESSARY';
+					dm_confirm_string='2508';
+				</tag>
+        </item>           
+     </one-of>
+   </item>
+</rule>		
+</grammar>

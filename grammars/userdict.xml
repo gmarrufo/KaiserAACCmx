@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lexicon xml:lang="en-US" alphabet="application/sampa;localization=nuance">
+<entry key="english">
+  <definition value="ih ng g l ax sh" />
+  <definition value="eh ng g l ax sh" />
+  <definition value="ih ng g l ih sh" />
+  <definition value="eh ng g l ih sh" />
+  <definition value="ih ng l ax sh" />
+  <definition value="eh ng l ax sh" />
+  <definition value="ih ng l ih sh" />
+  <definition value="eh ng l ih sh" />
+</entry>
+</lexicon>

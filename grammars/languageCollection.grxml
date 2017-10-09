@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<grammar mode="voice"
+         root="ROOT"
+         version="1.0"
+         xml:lang="en-US"
+         tag-format='swi-semantics/1.0'
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+<rule id="ROOT" scope="public">
+  <item>
+    <ruleref uri="#languageCollection"/>
+    <tag>
+      	dm_root=languageCollection.dm_root;
+		dm_confirmation_mode=languageCollection.dm_confirmation_mode;		
+    </tag>
+  </item>
+</rule>
+
+<rule id="languageCollection">
+  <item>	
+	<one-of>		
+		<item>
+			English
+			<tag>
+				dm_root='english';
+				dm_confirmation_mode='NEVER';		
+			</tag>		
+		</item>		
+		<item>
+			Espanol
+			<tag>
+				dm_root='spanish';
+				dm_confirmation_mode='NEVER';		
+			</tag>		
+		</item>	
+		<item>
+			Spanish
+			<tag>
+				dm_root='spanish';
+				dm_confirmation_mode='NEVER';		
+			</tag>		
+		</item>					   		
+	</one-of>	
+  </item>    
+</rule>
+
+</grammar>
+
+
+

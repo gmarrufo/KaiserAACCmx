@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<grammar mode="voice"
+         root="ROOT"
+         version="1.0"
+         xml:lang="es-US"
+         tag-format='swi-semantics/1.0'
+         xmlns="http://www.w3.org/2001/06/grammar"> 
+      
+<meta http-equiv="Expires" content="0"/> 
+<lexicon uri="userdictMx.xml?SWI.type=backup"/> 
+      
+<!-- ====================== -->
+<!--  root rule (default)   -->
+<!-- ====================== -->
+<rule id="ROOT" scope="public">
+  <item> 
+        <ruleref uri="#COMMAND"/>
+        <tag>
+            dm_command=COMMAND.command;
+            dm_confirmation_mode=COMMAND.confirmation_mode;
+            dm_confirm_string=COMMAND.confirm_string;
+        </tag>      
+  </item>
+</rule>	
+
+<!-- ====================== -->
+<!-- ayuda -->
+<!-- ====================== -->
+<rule id="COMMAND">
+  <item>ayuda
+    <tag>command='help';confirm_string='Ayuda';confirmation_mode='NEVER';</tag>
+  </item>
+</rule>
+
+	
+</grammar>

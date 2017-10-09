@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<grammar mode="voice"
+         root="ROOT"
+         version="1.0"
+         xml:lang="en-US"
+         tag-format='swi-semantics/1.0'
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+	<rule id="ROOT" scope="public">
+		<ruleref uri="#Location" tag="dm_root=Location.dataLocation;dm_confirm_string=Location.confirm_string;" />		
+	</rule>
+	<rule id="preLocation">
+		<one-of>
+			<item><ruleref special="NULL"/></item>
+			<item tag="tmpLocation='null'">Kaiser</item>
+		</one-of>
+	</rule>
+	<rule id="postLocation">
+		<one-of>
+			<item tag="tmpLocation='null'"><ruleref special="NULL"/></item>
+			<item tag="tmpLocation='null'">Clinic</item>
+			<item tag="tmpLocation='null'">Hospital</item>
+			<item tag="tmpLocation='null'">Offices</item>
+			<item tag="tmpLocation='null'">Medical Office Building</item>
+			<item tag="tmpLocation='null'">Medical Center</item>			
+			<item tag="tmpLocation='null'">Medical Offices</item>
+			<item tag="tmpLocation='null'">Kaiser</item>
+		</one-of>
+	</rule>
+	<rule id="Location">
+		<item><ruleref uri="#preLocation"/></item>
+		<one-of>
+			<item tag="dataLocation='1008';confirm_string='1008';">Antioch</item>
+			<item tag="dataLocation='1008';confirm_string='1008';">Delta Fair</item>
+			<item tag="dataLocation='1009';confirm_string='1009';">Deer Valley</item>
+			<item tag="dataLocation='1010';confirm_string='1010';">Campbell</item>
+			<item tag="dataLocation='1011';confirm_string='1011';">Davis</item>
+			<item tag="dataLocation='1012';confirm_string='1012';">Fairfield</item>
+			<item tag="dataLocation='1013';confirm_string='1013';">Folsom</item>
+			<item tag="dataLocation='1014';confirm_string='1014';">Fremont</item>
+			<item tag="dataLocation='1015';confirm_string='1015';">Clovis</item>			
+			<item tag="dataLocation='1016';confirm_string='1016';">Oakhurst</item>
+			<item tag="dataLocation='1017';confirm_string='1017';">Selma</item>
+			<item tag="dataLocation='1018';confirm_string='1018';">Fresno</item>
+			<item tag="dataLocation='1019';confirm_string='1019';">Gilroy</item>
+			<item tag="dataLocation='1020';confirm_string='1020';">Union City</item>
+			<item tag="dataLocation='1022';confirm_string='1022';">Manteca</item>
+			<item tag="dataLocation='1022';confirm_string='1022';">Man teekga</item>
+			<item tag="dataLocation='1023';confirm_string='1023';">Martinez</item>
+			<item tag="dataLocation='1024';confirm_string='1024';">Milpitas</item>
+			<item tag="dataLocation='1025';confirm_string='1025';">Modesto</item>
+			<item tag="dataLocation='1026';confirm_string='1026';">Stanislaus</item>
+			<item tag="dataLocation='1026';confirm_string='1026';">Stanislaus Providers</item>
+			<item tag="dataLocation='1026';confirm_string='1026';">Stanislaus Provider Network</item>
+			<item tag="dataLocation='1026';confirm_string='1026';">ess pea enn</item>
+			<item tag="dataLocation='1027';confirm_string='1027';">Mountain View</item>
+			<item tag="dataLocation='1028';confirm_string='1028';">Napa</item>
+			<item tag="dataLocation='1029';confirm_string='1029';">Novato</item>
+			<item tag="dataLocation='1030';confirm_string='1030';">Oakland</item>
+			<item tag="dataLocation='1030';confirm_string='1030';">Alta Bates</item>
+			<item tag="dataLocation='1031';confirm_string='1031';">Park Shadelands</item>
+			<item tag="dataLocation='1031';confirm_string='1031';">Shadelands</item>
+			<item tag="dataLocation='1032';confirm_string='1032';">Petaluma</item>
+			<item tag="dataLocation='1033';confirm_string='1033';">Pleasanton</item>
+			<item tag="dataLocation='1034';confirm_string='1034';">Point West</item>
+			<item tag="dataLocation='1035';confirm_string='1035';">Rancho Cordova</item>
+			<item tag="dataLocation='1035';confirm_string='1035';">Rancho</item>
+			<item tag="dataLocation='1036';confirm_string='1036';">Redwood City</item>
+			<item tag="dataLocation='1037';confirm_string='1037';">Richmond</item>
+			<item tag="dataLocation='1038';confirm_string='1038';">Roseville</item>
+			<item tag="dataLocation='1039';confirm_string='1039';">Sacramento</item>
+			<item tag="dataLocation='1039';confirm_string='1039';">Fair Oaks</item>
+			<item tag="dataLocation='1040';confirm_string='1040';">San Francisco</item>
+			<item tag="dataLocation='1040';confirm_string='1040';">French Campus</item>
+			<item tag="dataLocation='1040';confirm_string='1040';">Geary Campus</item>
+			<item tag="dataLocation='1040';confirm_string='1040';">Van Ness</item>
+			<item tag="dataLocation='1041';confirm_string='1041';">San Rafael</item>
+			<item tag="dataLocation='1041';confirm_string='1041';">San RaFell</item>
+			<item tag="dataLocation='1041';confirm_string='1041';">Terra linda</item>
+			<item tag="dataLocation='1041';confirm_string='1041';">West Marin</item>
+			<item tag="dataLocation='1041';confirm_string='1041';">Point Reyes</item>
+			<item tag="dataLocation='1042';confirm_string='1042';">Santa Clara</item>
+			<item tag="dataLocation='1042';confirm_string='1042';">Santa Clara Homestead</item>
+			<item tag="dataLocation='1042';confirm_string='1042';">Homestead</item>
+			<item tag="dataLocation='1042';confirm_string='1042';">Marina Playa</item>
+			<item tag="dataLocation='1043';confirm_string='1043';">Santa Rosa</item>
+			<item tag="dataLocation='1044';confirm_string='1044';">Rohnert Park</item>
+			<item tag="dataLocation='1045';confirm_string='1045';">Santa Teresa</item>
+			<item tag="dataLocation='1045';confirm_string='1045';">San Jose</item>
+			<item tag="dataLocation='1046';confirm_string='1046';">South Sacramento</item>
+			<item tag="dataLocation='1047';confirm_string='1047';">Elk Grove</item>			
+			<item tag="dataLocation='1048';confirm_string='1048';">South San Francisco</item>
+			<item tag="dataLocation='1049';confirm_string='1049';">Daly City</item>			
+			<item tag="dataLocation='1050';confirm_string='1050';">Stockton</item>
+			<item tag="dataLocation='1051';confirm_string='1051';">Vacaville</item>
+			<item tag="dataLocation='1052';confirm_string='1052';">Vallejo</item>
+			<item tag="dataLocation='1052';confirm_string='1052';">Valayho</item>
+			<item tag="dataLocation='1052';confirm_string='1052';">Valeao</item>
+			<item tag="dataLocation='1053';confirm_string='1053';">Walnut Creek</item>
+			<item tag="dataLocation='1054';confirm_string='1054';">San Bruno</item>
+			<item tag="dataLocation='1055';confirm_string='1055';">Livermore</item>
+			<item tag="dataLocation='1056';confirm_string='1056';">Tracy</item>
+			<item tag="dataLocation='1057';confirm_string='1057';">Alameda</item>
+			<item tag="dataLocation='1058';confirm_string='1058';">Pinole</item>
+			<item tag="dataLocation='1059';confirm_string='1059';">Lincoln</item>
+			<item tag="dataLocation='1060';confirm_string='1060';">San Mateo</item>
+			<item tag="dataLocation='1060';confirm_string='1060';">Peninsula</item>
+			<item tag="dataLocation='1061';confirm_string='1061';">Promenade</item>
+			<item tag="dataLocation='1061';confirm_string='1061';">Promenade Elk Grove</item>
+			<item tag="dataLocation='1061';confirm_string='1061';">Promenade South Sacramento</item>
+			<item tag="dataLocation='1061';confirm_string='1061';">Promenod</item>
+			<item tag="dataLocation='1061';confirm_string='1061';">Promenod Elk Grove</item>
+			<item tag="dataLocation='1061';confirm_string='1061';">Promenod South Sacramento</item>
+			<item tag="dataLocation='1062';confirm_string='1062';">San Ramon</item>
+			<item tag="dataLocation='1062';confirm_string='1062';">San Raymen</item>
+			<item tag="dataLocation='1062';confirm_string='1062';">Ramon</item>
+			<item tag="dataLocation='1062';confirm_string='1062';">Bishop Ranch</item>
+			<item tag="dataLocation='1062';confirm_string='1062';">Bishop Ranch San Ramon</item>
+			<item tag="dataLocation='1062';confirm_string='1062';">San Ramon Bishop Ranch</item>
+			<item tag="dataLocation='1063';confirm_string='1063';">Leandro</item>
+			<item tag="dataLocation='1063';confirm_string='1063';">San Leandro</item>
+			<item tag="dataLocation='1064';confirm_string='1064';">Sleepy Hollow</item>
+			<item tag="dataLocation='1064b';confirm_string='1064b';">Hayward</item>
+			<item tag="dataLocation='1064b';confirm_string='1064b';">Hayward Sleepy Hollow</item>
+			<item tag="dataLocation='1064b';confirm_string='1064b';">Sleepy Hollow Hayward</item>
+		</one-of>
+		<item><ruleref uri="#postLocation"/></item>
+	</rule>
+</grammar>

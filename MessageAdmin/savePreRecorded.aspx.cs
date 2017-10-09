@@ -1,0 +1,67 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+using System.Configuration;
+using Qwest.LangPack.VXML21;
+using System.IO;
+
+namespace KaiserAACCmx.MessageAdmin
+{
+	/// <summary>
+	/// 9972
+	/// </summary>
+	public partial class savePreRecorded : XMLPage
+	{
+		private void Page_Load(object sender, System.EventArgs e)
+		{
+			try
+			{
+				
+				string strOldFileName = Request.QueryString["message"].ToString().Trim();
+				string strNewFileName = strOldFileName + Request.QueryString["messageNum"].ToString().Trim(); 
+				string strLang = Request.QueryString["lang"].ToString().Trim();
+				string strDir = ConfigurationSettings.AppSettings["recFilePath"];				
+			
+				File.Copy(strDir + strLang + "\\" + Session["sessionID"].ToString() + strOldFileName + ".vox", strDir + strLang + "\\" + strNewFileName + ".vox", true);
+				
+				File.Delete(strDir + strLang + "\\" + Session["sessionID"].ToString() + strOldFileName + ".vox");	
+
+				URLRedirect u = new URLRedirect();
+				u.NextURL = "confirmGlobalMessageMenu.aspx?lang=" + strLang;				
+				
+				Response.Write(u.getVXML());
+			}
+            catch (Exception ex)
+            {
+                Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(ex, "General Exception Policy");
+            }	
+		}
+
+		#region Web Form Designer generated code
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: This call is required by the ASP.NET Web Form Designer.
+			//
+			InitializeComponent();
+			base.OnInit(e);
+		}
+		
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{    
+			
+		}
+		#endregion
+	}
+}

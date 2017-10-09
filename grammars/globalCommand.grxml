@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<grammar mode="voice"
+         root="ROOT"
+         version="1.0"
+         xml:lang="en-US"
+         tag-format='swi-semantics/1.0'
+         xmlns="http://www.w3.org/2001/06/grammar">
+	<rule id="ROOT" scope="public">
+		<ruleref tag="dm_command=COMMAND.command;dm_confirmation_mode=COMMAND.confirmation_mode;dm_confirm_string=COMMAND.confirm_string;" uri="#COMMAND"/>
+	</rule>
+	<rule id="COMMAND">
+		<one-of>
+			<item tag="command='help';confirmation_mode='NEVER';confirm_string='help';">Help</item>
+		</one-of>
+	</rule>
+</grammar>

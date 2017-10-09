@@ -1,0 +1,51 @@
+﻿<?xml version="1.0"?>
+<grammar mode="voice"
+         root="ROOT"
+         version="1.0"
+         xml:lang="es-US"
+         tag-format='swi-semantics/1.0'
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+
+<rule id="ROOT" scope="public">
+  <item>
+    <ruleref uri="#ynConfirmation"/>
+    <tag>
+      	dm_root=ynConfirmation.dm_root;
+      	dm_confirmation_mode=ynConfirmation.dm_confirmation_mode;
+		dm_confirm_string=ynConfirmation.dm_confirm_string;		
+    </tag>
+  </item>
+</rule>
+
+<rule id="ynConfirmation">
+   <item>
+     <one-of>
+        <item>
+			sí		
+				<tag>
+					dm_root='true';					
+					dm_confirmation_mode='IF_NECESSARY';
+					dm_confirm_string='yes';
+				</tag>
+        </item> 
+        <item>
+			correcto	
+				<tag>
+					dm_root='true';					
+					dm_confirmation_mode='IF_NECESSARY';
+					dm_confirm_string='yes';
+				</tag>
+        </item> 
+        <item>
+			no		
+				<tag>
+					dm_root='false';					
+					dm_confirmation_mode='IF_NECESSARY';
+					dm_confirm_string='no';
+				</tag>
+        </item>    
+     </one-of>
+   </item>
+</rule>		
+</grammar>
